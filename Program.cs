@@ -14,6 +14,7 @@ namespace From_A_to_B
             // int b = int.Parse(Console.ReadLine());
             int counter = 0;
             while( a != b){
+
                 if(a > b){
                     while(a > b){
                         if(a % 2 ==0){
@@ -27,11 +28,15 @@ namespace From_A_to_B
                     }
                 }
                 else{
-                    while(a < b){
-                        a++;
-                        counter++;
-                    }
+                    // while(a < b){
+                    //     a++;
+                    //     counter++;
+                    // }
+                    break;
                 }
+            }
+            if(a < b){
+                counter += b - a;
             }
             Console.WriteLine(counter);
         }
