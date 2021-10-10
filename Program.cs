@@ -6,13 +6,29 @@ namespace From_A_to_B
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World! something");
             int a = Int32.Parse(Console.ReadLine());
             int b = Int32.Parse(Console.ReadLine());
             int counter = 0;
-            Console.WriteLine(a);
-            Console.WriteLine(b);
-            Console.WriteLine(a+b);
+
+            if(a < b){
+                counter = 0;
+                counter += b - a;
+            }
+            else{
+                while(a > b){
+                    if(a % 2 ==0){
+                        a = a / 2;
+                        counter++;
+                    }
+                    else{
+                        a++;
+                        counter++;
+                    }
+                }
+                counter++;
+            }
+            
+            Console.WriteLine(counter);
         }
     }
 }
