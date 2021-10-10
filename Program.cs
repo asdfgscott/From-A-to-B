@@ -10,11 +10,7 @@ namespace From_A_to_B
             int b = Int32.Parse(Console.ReadLine());
             int counter = 0;
 
-            if(a < b){
-                counter = 0;
-                counter += b - a;
-            }
-            else{
+            if(a > b){
                 while(a > b){
                     if(a % 2 ==0){
                         a = a / 2;
@@ -27,7 +23,9 @@ namespace From_A_to_B
                 }
                 counter++;
             }
-            
+            else{
+                counter += b - a;
+            }
             Console.WriteLine(counter);
         }
     }
